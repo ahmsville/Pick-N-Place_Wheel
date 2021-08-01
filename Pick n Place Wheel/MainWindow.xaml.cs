@@ -91,7 +91,7 @@ namespace Pick_n_Place_Wheel
                 Directory.CreateDirectory(defaultpnpProjectPath);
             }
         }
-        private void StackPanel_MouseMove(object sender, MouseEventArgs e)//
+        private void StackPanel_MouseMove(object sender, MouseEventArgs e)
         {
 
             Point point = e.GetPosition(imageviewer);
