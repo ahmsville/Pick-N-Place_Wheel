@@ -1,0 +1,15 @@
+﻿<Application x:Class="Pick_n_Place_Wheel.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Pick_n_Place_Wheel"
+             StartupUri="MainWindow.xaml">
+   
+    
+
+   
+    <Application.Resources>
+   
+
+    </Application.Resources>
+</Application>

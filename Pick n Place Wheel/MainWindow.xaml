@@ -1,0 +1,310 @@
+﻿<Window x:Class="Pick_n_Place_Wheel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pick_n_Place_Wheel"
+        mc:Ignorable="d"
+        Title="Pick-N-Place Wheel" SizeToContent="Width" Height="920" FontSize="14" Left="0" Top="0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel  >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*"/>
+                            <ColumnDefinition Width="0.6*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Text="New Board" x:Name="boardprojectname" Grid.ColumnSpan="2" IsReadOnly="True" MouseDoubleClick="boardprojectname_MouseDoubleClick"
+                             KeyDown="boardprojectname_KeyDown" BorderThickness="0" FontSize="16" FontWeight="Bold"/>
+                        <StackPanel x:Name="boardfiles" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Vertical"/>
+
+                        <Button Grid.Row="2" Grid.Column="1" x:Name="loadboard" Content="Load" Click="loadboard_Click" Margin="5,10" Padding="5" FontSize="15" FontWeight="ExtraBold"/>
+                        <Label Content="Component" Grid.Row="3" />
+                        <ComboBox x:Name="compname" Grid.Row="3"  Grid.Column="1" ItemsSource="{Binding csvcolumn}"/>
+                        <Label Content="Value" Grid.Row="4" />
+                        <ComboBox x:Name="compvalue" Grid.Row="4"  Grid.Column="1" ItemsSource="{Binding csvcolumn}"/>
+                        <Label Content="Footprint" Grid.Row="5" />
+                        <ComboBox x:Name="compfootprint" Grid.Row="5"  Grid.Column="1" ItemsSource="{Binding csvcolumn}"/>
+                        <Label Content="X-Center" Grid.Row="6" />
+                        <ComboBox x:Name="compXaxis" Grid.Row="6"  Grid.Column="1" ItemsSource="{Binding csvcolumn}" />
+                        <Label Content="Y-Center" Grid.Row="7" />
+                        <ComboBox x:Name="compYaxis" Grid.Row="7"  Grid.Column="1" ItemsSource="{Binding csvcolumn}"/>
+
+                        <StackPanel  Grid.Row="8" >
+                            <Label Content="Board Width" HorizontalAlignment="Center" FontWeight="Bold"/>
+                            <TextBox x:Name="boardwidth" Text="00.00" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel  Grid.Row="8"  Grid.Column="1"  >
+                            <Label Content="Board Height" HorizontalAlignment="Center" FontWeight="Bold"/>
+                            <TextBox x:Name="boardheight" Text="00.00" HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+
+
+                        <Label Content="Unit" Grid.Row="9" />
+                        <ComboBox x:Name="dimensionUnit" Grid.Row="9"  Grid.Column="1" ItemsSource="{Binding units}" />
+
+                        <Label Content="Designator" Grid.Row="10" />
+                        <ComboBox x:Name="compdesignator" Grid.Row="10"  Grid.Column="1" ItemsSource="{Binding csvcolumn}" />
+                        <Label Content="Layer" Grid.Row="11" />
+                        <ComboBox x:Name="complayer" Grid.Row="11"  Grid.Column="1" ItemsSource="{Binding csvcolumn}" SelectionChanged="complayer_SelectionChanged"/>
+                        <Label Content="TopLayer Image" Grid.Row="12" />
+                        <ComboBox x:Name="toplayerIMG" Grid.Row="12"  Grid.Column="1" SelectionChanged="toplayerIMG_SelectionChanged"/>
+                        <Label Content="ButtomLayer Image" Grid.Row="13" />
+                        <ComboBox x:Name="buttomlayerIMG" Grid.Row="13"  Grid.Column="1" SelectionChanged="buttomlayerIMG_SelectionChanged"/>
+
+                        <StackPanel Grid.Row="14" Grid.ColumnSpan="2" Orientation="Horizontal" >
+                            <RadioButton Margin="10,4" x:Name="activatetoplayer" Content="TopLayer" Checked="activatelayer_Checked" FontWeight="Bold"/>
+                            <RadioButton Margin="10,4" x:Name="activatebuttomlayer" Content="ButtomLayer" Checked="activatelayer_Checked" FontWeight="Bold"/>
+                        </StackPanel>
+
+                        <Label Content="PnPWheel Info" Grid.Row="15"  HorizontalAlignment="Center" Grid.ColumnSpan="2" FontWeight="Bold"/>
+                        <StackPanel Grid.Row="16" Grid.ColumnSpan="2">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Content="Wheel1" Grid.Row="0" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontWeight="Bold" />
+                                <Label Content="Count" Grid.Row="1" Margin="0,0,10,0"/>
+                                <ComboBox Grid.Row="1" Grid.Column="1" x:Name="wheel1cnt" ItemsSource="{Binding w1slotcount}" Margin="0.434,0.019,0.358,28.943" Grid.RowSpan="2" SelectionChanged="wheel1cnt_SelectionChanged" RenderTransformOrigin="0.502,0.5" >
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Rectangle Width="17" Height="17" Margin="5,0" Fill="{Binding}" />
+                                                <TextBlock VerticalAlignment="Center" Text="{Binding}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <Label Content="Color" Grid.Row="2" Margin="0,0,10,0"/>
+                                <ComboBox Grid.Row="2" Grid.Column="1"  x:Name="wheel1color" ItemsSource="{Binding colors}"  >
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Rectangle Width="17" Height="17" Margin="5,0" Fill="{Binding}" />
+                                                <TextBlock VerticalAlignment="Center" Text="{Binding}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <Label Content="Wheel2" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontWeight="Bold" />
+                                <Label Content="Count" Grid.Row="1" Grid.Column="2" Margin="5,0,10,0"/>
+                                <ComboBox Grid.Row="1" Grid.Column="3" x:Name="wheel2cnt" ItemsSource="{Binding w2slotcount}" SelectionChanged="wheel2cnt_SelectionChanged">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Rectangle Width="17" Height="17" Margin="5,0" Fill="{Binding}" />
+                                                <TextBlock VerticalAlignment="Center" Text="{Binding}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <Label Content="Color" Grid.Row="2" Grid.Column="2" Margin="5,0,10,0"/>
+                                <ComboBox Grid.Row="2" Grid.Column="3"  x:Name="wheel2color" ItemsSource="{Binding colors}" >
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Rectangle Width="17" Height="17" Margin="5,0" Fill="{Binding}" />
+                                                <TextBlock VerticalAlignment="Center" Text="{Binding}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </Grid>
+                        </StackPanel>
+
+
+
+
+
+
+
+                        <Label Content="Wheel Pos" Grid.Row="17" />
+                        <ComboBox x:Name="wheelpos" Grid.Row="17"  Grid.Column="1"  ItemsSource="{Binding csvcolumn}"  />
+
+
+
+                        <Button Grid.Row="18" Grid.Column="1" x:Name="saveprojectsettings" Content="Update/Save" Click="saveprojectsettings_Click" Margin="5,10" Padding="5" FontSize="15" FontWeight="ExtraBold"/>
+                        <ComboBox x:Name="connectedDevices" Grid.Row="19" Margin="10"/>
+                        <Button x:Name="connectbutton" Content="{Binding Path=(local:PnPWheelViewModel.Instance).conbuttontext, Mode=TwoWay}" Click="connectbutton_Click" Grid.Row="19" Grid.Column="1" Margin="5,10" Padding="5" FontSize="15" FontWeight="ExtraBold"
+                                Foreground="{Binding Path=(local:PnPWheelViewModel.Instance).connectionstatecolor, Mode=TwoWay}"/>
+                        <TextBlock x:Name="connectionstatus" Text="{Binding Path=(local:PnPWheelViewModel.Instance).connectionstate, Mode=TwoWay}" Grid.Row="20" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="16" FontWeight="DemiBold"
+                                  Foreground="{Binding Path=(local:PnPWheelViewModel.Instance).connectionstatecolor, Mode=TwoWay}" />
+                    </Grid>
+                </StackPanel>
+
+            </ScrollViewer>
+            <Viewbox  Grid.Row="1" Grid.Column="2"  Margin="10">
+                <Grid  x:Name="imageviewer" MouseMove="StackPanel_MouseMove" >
+                    <Image x:Name="boardimage" Source="wheel.PNG" />
+
+                    <TextBlock x:Name="mouseposition"  Foreground="Gray"/>
+
+                </Grid>
+            </Viewbox>
+        </Grid>
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="gotoprevproject" Content="&lt;&lt;&lt;" Click="gotoprevproject_Click" Padding="5" FontSize="16" FontWeight="Heavy"/>
+            <StackPanel Margin="20,0" x:Name="wheelone" Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Wheel1" Grid.ColumnSpan="3" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <Label Content="Description" x:Name="W1_activecompdesc" Grid.Row="1" Grid.ColumnSpan="3" FontWeight="DemiBold"/>
+                    <Label Content="Value" x:Name="W1_activecompvalue" Grid.Row="2" />
+                    <Label Content="Footprint" x:Name="W1_activecompfootprint" Grid.Row="2" Grid.Column="1" />
+                    <Label Content="Layer" x:Name="W1_activecomplayer" Grid.Row="2" Grid.Column="2" />
+                    <Label Content="Designators" x:Name="W1_activecompdesignators" Grid.Row="3" Grid.ColumnSpan="3" />
+                    <Label Content="Slot" Grid.Row="4" FontWeight="DemiBold"/>
+                    <Label Content="0" Grid.Row="4" x:Name="W1_activeslot" Grid.Column="1" FontWeight="DemiBold"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Margin="20,0" x:Name="wheeltwo" Grid.Column="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Wheel2" Grid.ColumnSpan="3" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <Label Content="Description" x:Name="W2_activecompdesc" Grid.Row="1" Grid.ColumnSpan="3" FontWeight="DemiBold" />
+                    <Label Content="Value" x:Name="W2_activecompvalue" Grid.Row="2" />
+                    <Label Content="Footprint" x:Name="W2_activecompfootprint" Grid.Row="2" Grid.Column="1" />
+                    <Label Content="Layer" x:Name="W2_activecomplayer" Grid.Row="2" Grid.Column="2" />
+                    <Label Content="Designators" x:Name="W2_activecompdesignators" Grid.Row="3" Grid.ColumnSpan="3"  />
+                    <Label Content="Slot" Grid.Row="4" FontWeight="DemiBold" />
+                    <Label Content="0" Grid.Row="4" x:Name="W2_activeslot" Grid.Column="1" FontWeight="DemiBold"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Column="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.ColumnSpan="2">
+                        <Label Content="Components" HorizontalAlignment="Center" FontWeight="Bold"/>
+                        <ComboBox x:Name="valueandfootprint"  SelectionChanged="valueandfootprint_SelectionChanged"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Margin="5">
+                        <Label Content="Wheel1 Slots"  HorizontalAlignment="Center"/>
+                        <ComboBox  x:Name="newpos_wheel1"   SelectionChanged="newpos_wheel_SelectionChanged"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+                        <Label Content="Wheel2 Slots"  HorizontalAlignment="Center"/>
+                        <ComboBox  x:Name="newpos_wheel2"   SelectionChanged="newpos_wheel_SelectionChanged"/>
+                    </StackPanel>
+                    <Button x:Name="updateCompPosition" Content="Update Component Position" Grid.Row="2" Grid.ColumnSpan="2" Click="updateCompPosition_Click"
+                                    Margin="10" Padding="5" FontWeight="Bold" FontSize="15"/>
+                    <Button x:Name="importCompPositionFromExisting" Content="Import From Existing Project" Grid.Row="3" Grid.ColumnSpan="2"
+                                    Margin="10,0" Padding="5" FontWeight="Bold" FontSize="14" Click="importCompPositionFromExisting_Click"/>
+                </Grid>
+
+            </StackPanel>
+            <StackPanel x:Name="wheel1panel" Grid.Column="4" Background="{Binding Path=(local:PnPWheelViewModel.Instance).wheel1color, Mode=TwoWay}" Margin="10,0">
+                <Label Content="Wheel 1" Grid.Row="1" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="wheel1status" Text="wheel1 Status" HorizontalAlignment="Center" />
+                <TextBlock x:Name="wheel1slotcomponent" Text="components"  HorizontalAlignment="Center" FontSize="18" FontWeight="DemiBold"/>
+                <TextBlock x:Name="wheel1activeslot" Text="0"  HorizontalAlignment="Center" FontSize="48" FontWeight="Bold"/>
+                <Button x:Name="resetwheel1" Content="Reset" Margin="10" Padding="3" FontWeight="Bold" FontSize="15" Background="Transparent" Click="resetwheel1_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="wheel2panel" Grid.Column="5" Background="{Binding Path=(local:PnPWheelViewModel.Instance).wheel2color, Mode=TwoWay}" Margin="10,0">
+                <Label Content="Wheel 2" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="wheel2status" Text="wheel2 Status" HorizontalAlignment="Center" />
+                <TextBlock x:Name="wheel2slotcomponent" Text="components"  HorizontalAlignment="Center" FontSize="18" FontWeight="DemiBold"/>
+                <TextBlock x:Name="wheel2activeslot" Text="0"  HorizontalAlignment="Center" FontSize="48" FontWeight="Bold"/>
+                <Button x:Name="resetwheel2" Content="Reset" Margin="10" Padding="3" FontWeight="Bold" FontSize="15" Background="Transparent" Click="resetwheel2_Click"/>
+            </StackPanel>
+
+            <Button x:Name="gotonextproject" Content="&gt;&gt;&gt;" Click="gotonextproject_Click" Grid.Column="6" Padding="5" FontSize="16" FontWeight="Heavy" />
+        </Grid>
+
+    </Grid>
+</Window>

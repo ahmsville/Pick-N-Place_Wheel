@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pick-N-Place Wheel", "Pick n Place Wheel\Pick-N-Place Wheel.csproj", "{C9B5FCB9-E4D0-4824-B928-94AB2917D7DE}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Pick-N-Place Wheel Installer", "Pick n Place Wheel Installer\Pick n Place Wheel Installer.vdproj", "{98AB8934-228F-4781-96E0-B7B462E373F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9B5FCB9-E4D0-4824-B928-94AB2917D7DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B5FCB9-E4D0-4824-B928-94AB2917D7DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B5FCB9-E4D0-4824-B928-94AB2917D7DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B5FCB9-E4D0-4824-B928-94AB2917D7DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98AB8934-228F-4781-96E0-B7B462E373F0}.Debug|Any CPU.ActiveCfg = Debug
+		{98AB8934-228F-4781-96E0-B7B462E373F0}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B813DF12-C903-4EDC-8D47-4279530164D3}
+	EndGlobalSection
+EndGlobal
