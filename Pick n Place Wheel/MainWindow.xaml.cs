@@ -36,6 +36,7 @@ namespace Pick_n_Place_Wheel
 
         string pnpProjectPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\PickNPlace Wheel\";
         string defaultpnpProjectPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\PickNPlace Wheel\";
+        string activeWheelPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\PickNPlace Wheel\";
         string csvpath;
         string toplayerimagepath;
         string buttomlayerimagepath;
@@ -308,7 +309,7 @@ namespace Pick_n_Place_Wheel
             if (result == true)
             {
                 pnpProjectPath = System.IO.Path.GetDirectoryName(dlg.FileName);
-
+                activeWheelPath = System.IO.Directory.GetParent(pnpProjectPath).ToString();
                 //get csv
                 string[] csvfiles = Directory.GetFiles(pnpProjectPath, "*.csv");
                 if (csvfiles.Length == 1)
@@ -395,6 +396,7 @@ namespace Pick_n_Place_Wheel
             //load board files
 
             pnpProjectPath = projectfolder;
+            activeWheelPath = System.IO.Directory.GetParent(pnpProjectPath).ToString();
             //get csv
             string[] csvfiles = Directory.GetFiles(pnpProjectPath, "*.csv");
             if (csvfiles.Length == 1)
@@ -1270,7 +1272,7 @@ namespace Pick_n_Place_Wheel
 
         private void gotoprevproject_Click(object sender, RoutedEventArgs e)
         {
-            string[] projectsfolders = Directory.GetDirectories(defaultpnpProjectPath);
+            string[] projectsfolders = Directory.GetDirectories(activeWheelPath);
             string prevproject = "";
             foreach (var folder in projectsfolders)
             {
@@ -1311,7 +1313,7 @@ namespace Pick_n_Place_Wheel
 
         private void gotonextproject_Click(object sender, RoutedEventArgs e)
         {
-            string[] projectsfolders = Directory.GetDirectories(defaultpnpProjectPath);
+            string[] projectsfolders = Directory.GetDirectories(activeWheelPath);
             string nextproject = "";
             foreach (var folder in projectsfolders)
             {
