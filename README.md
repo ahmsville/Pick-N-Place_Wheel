@@ -4,7 +4,7 @@ The Pick-N-Place Wheel is a 3D Printing solution for manual PCB assembly, compon
 
 **Full Project Page** - https://www.hackster.io/ahmsville/pick-n-place-wheel-ca6249
 
-**Download 3D Printing Files** – https://drive.google.com/file/d/13K5KHEiYU0XfNlAly5jGHfDs_ekXsjdr/view?usp=sharing
+**Download 3D Printing Files** – https://drive.google.com/drive/folders/1683IqBfpfqTGOragiw7VByFAC5zYk7Vf?usp=sharing
 
 **Buy the Pick-N-Place Wheel Board** - https://www.tindie.com/products/24720/
 
