@@ -13,3 +13,8 @@ The Pick-N-Place Wheel is a 3D Printing solution for manual PCB assembly, compon
 ![20210812_183116-1](https://user-images.githubusercontent.com/44074914/129452388-2d770b87-684d-4f67-a347-c38d13b1e22f.jpg)
 
 
+![20220212_213551](https://user-images.githubusercontent.com/44074914/153772082-e1861038-55ca-4135-b1b9-a3610f3235bf.jpg)
+
+![20220212_202728](https://user-images.githubusercontent.com/44074914/153771939-fad342ec-076a-446c-921c-8790fd2ae4ee.jpg)
+
+![20220212_203438 - Copy](https://user-images.githubusercontent.com/44074914/153771991-42a1a80a-afe4-4b39-87f7-39873bfed03e.jpg)
