@@ -1,0 +1,53 @@
+Altium Designer Pick and Place Locations
+C:\Users\ahmsv\OneDrive\MY STUFF\Circuits & PCB'S\Altium\Ahmsville Dial V.2\Project Outputs for Ahmsville Dial V.2\Pick Place for Receiver USB dongle(QFN SAMD21).csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       14/05/21
+Time:       22:40
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+Designator,Comment,Layer,Footprint,Center-X(mm),Center-Y(mm),Rotation,Description,Value,PnPWheel Position
+H10,9PIN,TopLayer,Wireless_Adapter_Header,25.1264,7.62,0,Header 9PIN,,unloaded
+Y4,32.768KHz,BottomLayer,SMD_3215_-_CRYSTAL,17.1514,13.6292,360,Crystal,16MHz,w1_033
+U18,SAMD21G18A-AUT,BottomLayer,QFN48_7x7,20.7996,7.216,270,Low-Power, 32-bit Cortex-M0+ MCU with Advanced Analogand PWM,unloaded
+R37,Res,BottomLayer,0603_res,14.4536,5.8582,0,Resistor,10K,w1_019
+R38,Res,TopLayer,0603_res,18.4682,7.6738,270,Resistor,1K,w1_040
+R35,Res,TopLayer,0603_res,21.7194,12.9434,360,Resistor,500ma fuse 0603,w1_015
+L9,Inductor,BottomLayer,0603_IND,24.7928,13.4006,270,Decoupling/filtering inductor,30oh@100MHz,w2_020
+H19,1PIN,TopLayer,HEADER_1PIN_PROG,16.233,11.4803,0,Header 1PIN,,unloaded
+H20,1PIN,TopLayer,HEADER_1PIN_PROG,14.4296,9.9462,0,Header 1PIN,,unloaded
+H21,1PIN,TopLayer,HEADER_1PIN_PROG,14.1248,2.3648,0,Header 1PIN,,unloaded
+D6,LED,TopLayer,0603_LED,15.9288,7.7601,180,Typical BLUE SiC LED,,w2_019
+C46,Cap,BottomLayer,0603_cap,14.4536,4.2771,360,Capacitor,0.1uF,w1_030
+C51,Cap,BottomLayer,0603_cap,22.2822,14.315,180,Capacitor,10uF,w1_013
+C50,Cap,BottomLayer,0603_cap,14.4536,7.1522,360,Capacitor,0.1uF,w1_030
+C52,Cap,BottomLayer,0603_cap,22.2662,12.7656,180,Capacitor,0.1uF,w1_030
+C45,Cap,BottomLayer,0603_cap,26.476,6.7146,90,Capacitor,0.1uF,w1_030
+C54,Cap,BottomLayer,0603_cap,19.9668,13.5333,270,Capacitor,15pF,w1_011
+C49,Cap,BottomLayer,0603_cap,14.4536,8.5746,360,Capacitor,0.1uF,w1_030
+C53,Cap,BottomLayer,0603_cap,14.2264,13.6172,270,Capacitor,15pF,w1_011
+Y3,16MHz,TopLayer,SMD_3225_-_CRYSTAL,28.073,4.5362,360,Crystal,16MHz,w1_010
+U19,HX9193,TopLayer,SOT23-5_N,22.9272,8.0346,90,3.3V Fixed Output Voltage Regulator,,w1_007
+U17,NRF24L01P-R,TopLayer,QFN20_4x4,28.455,9.2006,0,nRF24L01+Single Chip 2.4GHz Transceiver,,unloaded
+C56,Cap,TopLayer,0805_cap,21.6522,11.1346,180,Capacitor,10uF,w1_014
+C55,Cap,TopLayer,0805_cap,21.5502,4.6846,180,Capacitor,10uF,w1_014
+A2,CHIP ANTENNA,TopLayer,CHIP_ANTENNA_7x2mm,42.23,9.0719,270,SLDA52-2R540G (C279814),,w1_044
+R36,Res,TopLayer,0402_RES,27.93,2.2506,360,Resistor,1M,w2_006
+R34,Res,TopLayer,0402_RES,32.03,11.3006,270,Resistor,22K,w2_011
+L8,Inductor_chip,TopLayer,0402_IND,33.149,7.5507,270,Inductor (CHIP),2.7nH,w2_016
+L7,Inductor_chip,TopLayer,0402_IND,32.0558,8.6626,270,Inductor (CHIP),8.2nH,w2_010
+L6,Inductor_chip,TopLayer,0402_IND,33.649,9.1555,360,Inductor (CHIP),3.9nH,w2_008
+H12,4PIN,TopLayer,PCB_USB_2.0,6.55,7.6256,90,Header 4PIN,,unloaded
+C48,Cap,TopLayer,0402_CAP,25.33,4.6886,270,Capacitor,22pF,w2_014
+C47,Cap,TopLayer,0402_CAP,30.83,4.6506,90,Capacitor,22pF,w2_014
+C44,Cap,TopLayer,0402_CAP,34.74,7.0491,360,Capacitor,2.2nF,w2_017
+C43,Cap,TopLayer,0402_CAP,34.7322,5.9569,360,Capacitor,4.7pF,w2_004
+C42,Cap,TopLayer,0402_CAP,37.3455,9.6452,90,Capacitor,1pF,w2_012
+C41,Cap,TopLayer,0402_CAP,35.7461,9.1497,180,Capacitor,1.5pF,w2_021
+C40,Cap,TopLayer,0402_CAP,30.83,12.7506,180,Capacitor,1nF,w2_018
+C39,Cap,TopLayer,0402_CAP,28.78,12.7506,180,Capacitor,10nF,w2_005
+C38,Cap,TopLayer,0402_CAP,26.13,12.7506,360,Capacitor,33nF,w2_009
